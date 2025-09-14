@@ -1,0 +1,223 @@
+:root{
+  --bg:#0a0d0a;
+  --bg-soft:#0e1510;
+  --ink:#dfffe5;
+  --muted:#93b39a;
+  --neon:#00ff7b;
+  --neon2:#44ffa6;
+  --grid:rgba(0,255,123,.11);
+
+  /* Bootstrap variabelen zodat tekst licht blijft */
+  --bs-body-color: var(--ink);
+  --bs-heading-color: var(--ink);
+  --bs-link-color: var(--neon);
+  --bs-link-hover-color: var(--neon2);
+  --bs-secondary-color: var(--muted);
+  --bs-secondary-text-emphasis: var(--muted);
+  --bs-border-color: rgba(0,255,123,.15);
+}
+
+html,body{background:linear-gradient(180deg,#0a0d0a,#0b120c);color:var(--ink);font-family:"Inter",system-ui,Segoe UI,Roboto,Arial,sans-serif}
+.mono{font-family:"JetBrains Mono",monospace}
+a{color:var(--neon);text-decoration:none}
+a:hover{opacity:.9}
+
+.fw-800{font-weight:800}
+
+/* HERO sizing & layering */
+.hero {
+  position: relative;
+  min-height: 100vh;          /* hero vult hele schermhoogte */
+  display: flex;              /* gebruik flexbox */
+  align-items: center;        /* verticaal centreren */
+  justify-content: center;    /* horizontaal centreren */
+  text-align: center;         /* voor de zekerheid */
+  padding: 0;                 /* verwijder extra padding */
+}
+
+.hero-canvas{
+  position:absolute; inset:0;
+  z-index:0;
+  opacity:.5;
+  filter:drop-shadow(0 0 12px rgba(0,255,123,.35));
+  mix-blend-mode:screen;
+}
+/* scanline overlay */
+.hero::after{
+  content:"";
+  position:absolute; inset:-1px;
+  pointer-events:none;
+  background-image:linear-gradient(rgba(0,0,0,0) 96%, rgba(0,255,123,.08) 97%, rgba(0,0,0,0) 100%);
+  background-size:100% 3px;
+  opacity:.25;
+  z-index:1;
+}
+
+/* Navbar glass */
+.glass-nav{backdrop-filter:blur(8px);background:rgba(10,15,10,.6);border-bottom:1px solid rgba(0,255,123,.12)}
+.navbar-brand .text-neon{color:var(--neon)}
+.brand-caret{color:var(--neon2);animation:navBlink 1s steps(1) infinite}
+@keyframes navBlink{50%{opacity:0}}
+.navbar-dark .navbar-toggler{border-color:rgba(0,255,123,.22)}
+.navbar-dark .navbar-toggler:focus{box-shadow:0 0 0 .2rem rgba(0,255,123,.2)}
+.navbar-dark .nav-link{opacity:.9}
+.navbar-dark .nav-link:hover{opacity:1}
+
+/* Buttons */
+.btn-neon{
+  --bs-btn-color:#001b0a;
+  --bs-btn-border-color:var(--neon);
+  --bs-btn-bg:linear-gradient(180deg,rgba(0,255,123,.22),rgba(0,255,123,.08));
+  --bs-btn-hover-border-color:var(--neon2);
+  box-shadow:none;
+}
+.btn-neon:hover{box-shadow:0 0 20px rgba(0,255,123,.45);transform:translateY(-2px)}
+.btn-outline-ghost{
+  --bs-btn-color:var(--ink);
+  --bs-btn-border-color:#235736;
+  --bs-btn-hover-color:var(--ink);
+  --bs-btn-hover-bg:#0e2115;
+  --bs-btn-hover-border-color:#2c6b40;
+}
+
+/* Hero text */
+.hero .display-4{letter-spacing:.2px}
+.cursor{display:inline-block;width:10px;height:1.1em;background:linear-gradient(var(--neon), var(--neon2));margin-left:4px;transform:translateY(3px);animation:blink .9s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+
+.text-neon{color:var(--neon)}
+.text-neon2{color:var(--neon2)}
+.link-neon{color:var(--neon);text-decoration:underline dotted rgba(0,255,123,.35)}
+.link-neon:hover{opacity:1;text-decoration-color:rgba(0,255,123,.7)}
+
+/* Subtiele animated grid in hero (blijft) */
+.cyber-grid{
+  position:absolute;inset:-10%;
+  z-index:0;
+  background-image:
+    linear-gradient(transparent 0 2px, var(--grid) 2px 3px, transparent 3px),
+    linear-gradient(90deg, transparent 0 2px, var(--grid) 2px 3px, transparent 3px);
+  background-size:64px 64px;
+  mask-image:radial-gradient(ellipse at center, rgba(0,0,0,.92), rgba(0,0,0,.2) 55%, transparent 70%);
+  opacity:.35;animation:gridFloat 18s ease-in-out infinite alternate;pointer-events:none
+}
+@keyframes gridFloat{
+  from{transform:perspective(900px) rotateX(55deg) translateY(-8%)}
+  to{transform:perspective(900px) rotateX(55deg) translateY(6%)}
+}
+
+/* Cards / lists */
+.bg-glass{
+  background:linear-gradient(180deg,rgba(16,36,22,.42),rgba(10,20,13,.42));
+  backdrop-filter:blur(3px);
+  box-shadow:0 8px 24px rgba(0,0,0,.28);
+}
+.border-neon-subtle{border:1px solid rgba(0,255,123,.15)!important}
+
+.rowline{transition:background .2s ease}
+.rowline:hover{background:linear-gradient(90deg, rgba(0,255,123,.05), transparent 45%)}
+
+/* Dots + badges/tags */
+.dot{display:inline-block;width:9px;height:9px;border-radius:50%}
+.dot--green{background:var(--neon2)}
+.badgeline{background:#0e291a;border:1px solid #1d6d43;color:var(--neon2)}
+.tag{background:#0e2316;border:1px solid #234d2f;color:#b8d6c0}
+.tag--wire{background:#0b1d12;border-color:#1c3b28}
+
+/* Company logos rechts */
+.company-logo {
+  width: 96px;      
+  height: auto;
+  opacity: .95;
+  border-radius: 8px;
+  border: 1px solid rgba(0,255,123,.15);
+  background: #0c1410;
+  padding: 8px;
+  box-shadow: 0 6px 16px rgba(0,0,0,.35);
+  transition: transform .2s ease, opacity .2s ease;
+}
+.rowline:hover .company-logo {
+  transform: translateY(-3px);
+  opacity: 1;
+}
+
+
+/* Utilities */
+.text-secondary-emphasis{color:#cfe9d6!important}
+
+/* Reduce motion */
+@media (prefers-reduced-motion: reduce){
+  .cursor{animation:none}
+  .cyber-grid{animation:none}
+  .hero-canvas{display:none}
+}
+
+/* ===== Endless Logo Loop (clean style, bigger, faster) ===== */
+.loop {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  --loop-speed: 20s;     /* snelheid van de loop: lager = sneller */
+  --tile-size: 180px;    /* grootte van de tegels */
+  --gap: 3rem;           /* meer ruimte tussen de logo’s */
+}
+
+.loop-track {
+  display: flex;
+  width: max-content;
+  animation: loop-scroll var(--loop-speed) linear infinite;
+  will-change: transform;
+}
+
+/* pauzeer als je over een logo hovert */
+.loop:has(.loop-slide:hover) .loop-track {
+  animation-play-state: paused;
+}
+
+.loop-group {
+  display: flex;
+  gap: var(--gap);
+  padding: .5rem 0;
+}
+
+@keyframes loop-scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+/* slides */
+.loop-slide {
+  flex: 0 0 auto;
+  width: var(--tile-size);
+  height: var(--tile-size);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  padding: 0;
+  transition: transform .18s ease, opacity .18s ease;
+}
+.loop-slide:hover {
+  transform: scale(1.05);
+}
+
+.loop-slide img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  opacity: .98;
+  transition: transform .18s ease;
+}
+.loop-slide img:hover {
+  transform: scale(1.1);
+}
+
+/* groter op brede schermen */
+@media (min-width: 768px){
+  .loop { --tile-size: 200px; }
+}
+@media (min-width: 1200px){
+  .loop { --tile-size: 220px; }
+}

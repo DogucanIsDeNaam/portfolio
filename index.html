@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Doğucan Ulucan — CV</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=JetBrains+Mono:wght@400;600;800&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5 (CDN) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- NAVBAR (Bootstrap) -->
+  <nav class="navbar navbar-expand-md navbar-dark glass-nav sticky-top">
+    <div class="container">
+      <a class="navbar-brand mono d-flex align-items-center gap-2" href="#home">
+        <span class="text-neon">&gt;_</span> doğucan <span class="brand-caret d-none d-sm-inline">▌</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+              aria-controls="mainNav" aria-expanded="false" aria-label="Navigatie wisselen">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto align-items-md-center gap-1">
+          <li class="nav-item"><a class="nav-link mono" href="#xp">ervaring</a></li>
+          <li class="nav-item"><a class="nav-link mono" href="#edu">opleiding</a></li>
+          <li class="nav-item"><a class="nav-link mono" href="#contact">contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header id="home" class="position-relative overflow-hidden hero">
+    <!-- matrix rain canvas -->
+    <canvas id="matrix" class="hero-canvas" aria-hidden="true"></canvas>
+
+    <!-- bestaand grid -->
+    <div class="cyber-grid" aria-hidden="true"></div>
+
+    <div class="container position-relative">
+      <div class="row justify-content-center text-center">
+        <div class="col-lg-9">
+          <h1 class="display-4 fw-800 mb-2">Doğucan <span class="text-neon2">Ulucan</span></h1>
+          <p class="lead text-secondary-emphasis mb-3">Student met brede interesse in technologie en ontwikkeling.</p>
+          <div class="d-inline-flex align-items-center gap-2 mono mb-4">
+            <span class="text-neon">role:</span>
+            <span id="typewriter" class="type"></span><span class="cursor" aria-hidden="true"></span>
+          </div>
+          <div class="d-flex gap-2 justify-content-center flex-wrap">
+            <a href="#xp" class="btn btn-neon mono" style="color: white;">/bekijk_ervaring</a>
+            <a href="#contact" class="btn btn-outline-ghost mono">/contact</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ERVARING -->
+  <section id="xp" class="py-5">
+    <div class="container">
+      <div class="mb-4">
+        <h2 class="h6 text-neon mono mb-1">/ervaring</h2>
+        <p class="mono text-muted mb-0">tail -n 5 ~/cv/ervaring.log</p>
+      </div>
+
+      <div class="card bg-glass border-neon-subtle">
+        <ul class="list-group list-group-flush bg-transparent">
+          <!-- item -->
+          <li class="list-group-item bg-transparent px-3 py-4 rowline">
+            <div class="d-flex gap-3">
+              <div class="pt-1"><span class="dot dot--green"></span></div>
+              <div class="flex-grow-1">
+                <div class="d-flex flex-wrap align-items-center gap-2 mb-1">
+                  <strong>Beveiligingsmedewerker</strong><span class="text-secondary">— Workrate</span>
+                  <span class="badge rounded-pill badgeline ms-1 mono">Parttime</span>
+                </div>
+                <div class="mono text-muted small mb-2">okt. 2024 – heden • Randstad • Op locatie</div>
+                <ul class="mb-2 ps-4">
+                  <li>Toezien op veiligheid en naleving van procedures binnen het datacenter</li>
+                </ul>
+                <div class="d-flex flex-wrap gap-2">
+                  <span class="badge tag mono">Security Awareness</span>
+                                    <span class="badge tag mono">Dienstverlenend</span>
+                  <span class="badge tag tag--wire mono">Probleemoplossend vermogen</span>
+                </div>
+              </div>
+              <div class="ms-auto d-none d-md-flex align-items-center">
+                <!-- vervang src met jouw logo -->
+                <img class="company-logo" src="https://d2q79iu7y748jz.cloudfront.net/s/_squarelogo/256x256/6fff71b86b04910355d0b80ee1a9f132" alt="Workrate logo">
+              </div>
+            </div>
+          </li>
+
+          <!-- item -->
+          <li class="list-group-item bg-transparent px-3 py-4 rowline">
+            <div class="d-flex gap-3">
+              <div class="pt-1"><span class="dot dot--green"></span></div>
+              <div class="flex-grow-1">
+                <div class="d-flex flex-wrap align-items-center gap-2 mb-1">
+                  <strong>Logistiek medewerker</strong><span class="text-secondary">— Uitzendbureau Carrière</span>
+                  <span class="badge rounded-pill badgeline ms-1 mono">Parttime</span>
+                </div>
+                <div class="mono text-muted small mb-2">jul. 2022 – heden • Hoofddorp</div>
+                <ul class="mb-2 ps-4">
+                  <li>Import/Export operations, Forklift operation voor bedrijven, zoals WFS, DSV Pilot Air en PostNL</li>
+                </ul>
+                <div class="d-flex flex-wrap gap-2">
+                  <span class="badge tag mono">Import</span>
+                  <span class="badge tag mono">Export</span>
+                  <span class="badge tag tag--wire mono">ULD</span>
+                </div>
+              </div>
+              <div class="ms-auto d-none d-md-flex align-items-center">
+                <img class="company-logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_FrA6l1vr9LlBxbe4v0b8XumI3n-T1I5Aew&s" alt="Carrière logo">
+              </div>
+            </div>
+          </li>
+
+          <!-- item -->
+          <li class="list-group-item bg-transparent px-3 py-4 rowline">
+            <div class="d-flex gap-3">
+              <div class="pt-1"><span class="dot dot--green"></span></div>
+              <div class="flex-grow-1">
+                <div class="d-flex flex-wrap align-items-center gap-2 mb-1">
+                  <strong>Web Developer</strong><span class="text-secondary">— Dutch Branders</span>
+                                  <span class="badge rounded-pill badgeline ms-1 mono">Stage</span>
+                </div>
+                
+                <div class="mono text-muted small mb-2">jan. 2024 – jul. 2024 • Zaandam • Hybride</div>
+                <ul class="mb-2 ps-4">
+                  <li>Websites & webshops; productpresentatie en assets-optimalisatie.</li>
+                </ul>
+                <div class="d-flex flex-wrap gap-2">
+                  <span class="badge tag mono">HTML</span>
+                  <span class="badge tag mono">CSS</span>
+                  <span class="badge tag mono">JavaScript</span>
+                  <span class="badge tag tag--wire mono">PHP</span>
+                </div>
+              </div>
+              <div class="ms-auto d-none d-md-flex align-items-center">
+                <img class="company-logo" src="./fotos/dutchbranders.png" alt="Dutch Branders logo">
+              </div>
+            </div>
+          </li>
+
+          <!-- item -->
+          <li class="list-group-item bg-transparent px-3 py-4 rowline">
+            <div class="d-flex gap-3">
+              <div class="pt-1"><span class="dot dot--green"></span></div>
+              <div class="flex-grow-1">
+                <div class="d-flex flex-wrap align-items-center gap-2 mb-1">
+                  <strong>Software Developer</strong><span class="text-secondary">— Learn&amp;Earn</span>
+                  <span class="badge rounded-pill badgeline ms-1 mono">Stage</span>
+                </div>
+                <div class="mono text-muted small mb-2">aug. 2022 – jan. 2023 • Haarlem • Hybride</div>
+                <ul class="mb-2 ps-4">
+                  <li>2D/3D websites bouwen; samenwerking met design & development.</li>
+                </ul>
+                <div class="d-flex flex-wrap gap-2">
+                  <span class="badge tag mono">JavaScript</span>
+                  <span class="badge tag mono">Git</span>
+                  <span class="badge tag tag--wire mono">3D/VR</span>
+                </div>
+              </div>
+              <div class="ms-auto d-none d-md-flex align-items-center">
+                <img class="company-logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS62yLuaA5UPObYao-NrHNP5Z4gS9XNIl1B9w&s" alt="Learn&Earn logo">
+              </div>
+            </div>
+          </li>
+
+          <!-- item -->
+          <li class="list-group-item bg-transparent px-3 py-4">
+            <div class="d-flex gap-3">
+              <div class="pt-1"><span class="dot dot--green"></span></div>
+              <div class="flex-grow-1">
+                <div class="d-flex flex-wrap align-items-center gap-2 mb-1">
+                  <strong>Winkelmedewerker</strong><span class="text-secondary">— DekaMarkt</span>
+                  <span class="badge rounded-pill badgeline ms-1 mono">Parttime</span>
+                </div>
+                <div class="mono text-muted small mb-2">okt. 2020 – mei 2021 • Zaandam • Op locatie</div>
+              </div>
+              <div class="ms-auto d-none d-md-flex align-items-center">
+                <img class="company-logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMb3XAF7FeijyegMn7_sTwkdrdAY6SsXyPhA&s" alt="DekaMarkt logo">
+              </div>
+            </div>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- OPLEIDING -->
+  <section id="edu" class="py-5">
+    <div class="container">
+      <div class="mb-4">
+        <h2 class="h6 text-neon mono mb-1">/opleiding</h2>
+        <p class="mono text-muted mb-0">cat ~/cv/opleiding.txt</p>
+      </div>
+
+      <div class="card bg-glass border-neon-subtle">
+        <ul class="list-group list-group-flush bg-transparent">
+          <!-- item -->
+          <li class="list-group-item bg-transparent px-3 py-4 rowline">
+            <div class="d-flex gap-3">
+              <div class="pt-1"><span class="dot dot--green"></span></div>
+              <div class="flex-grow-1">
+                <div class="d-flex flex-wrap align-items-center gap-2 mb-1">
+                  <strong>Hogeschool van Amsterdam</strong>
+                  <span class="text-secondary">— Cybersecurity</span>
+                </div>
+                <div class="mono text-muted small mb-2">sep. 2024 – heden</div>
+                <div class="d-flex flex-wrap gap-2">
+                  <!-- <span class="badge tag mono">TypeScript</span> -->
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <!-- item -->
+          <li class="list-group-item bg-transparent px-3 py-4">
+            <div class="d-flex gap-3">
+              <div class="pt-1"><span class="dot dot--green"></span></div>
+              <div class="flex-grow-1">
+                <div class="d-flex flex-wrap align-items-center gap-2 mb-1">
+                  <strong>Regio College</strong>
+                  <span class="text-secondary">— Software Developer (MBO 4)</span>
+                </div>
+                <div class="mono text-muted small mb-2">dec. 2021 – jul. 2024</div>
+                <div class="d-flex flex-wrap gap-2">
+                  <span class="badge tag mono">PHP</span>
+                  <span class="badge tag mono">Python</span>
+                  <span class="badge tag mono">SQL</span>
+                  <span class="badge tag mono">Laravel</span>
+                  <span class="badge tag mono">HTML/CSS</span>
+                  <span class="badge tag mono">Javascript</span>
+                </div>
+              </div>
+            </div>
+          </li>
+
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+
+
+<!-- INTERESSES / ENDLESS LOOP -->
+<section id="interests" class="py-5">
+  <div class="container">
+    <div class="mb-4">
+      <h2 class="h6 text-neon mono mb-1">/interesses</h2>
+      <p class="mono text-muted mb-0">echo ~/persoonlijk/favo/* | xargs show</p>
+    </div>
+
+    <div class="card bg-glass border-neon-subtle p-3">
+      <!-- Endless loop: twee identieke groepen voor naadloze herhaling -->
+      <div class="loop" aria-label="Interesse-logo's — eindeloze loop">
+        <div class="loop-track">
+          <!-- groep 1 -->
+          <div class="loop-group">
+            <div class="loop-slide"><img src="./fotos/Fenerbahçe.svg.png" alt="Fenerbahçe"></div>
+            <div class="loop-slide"><img src="./fotos/sopranos.png" alt="sopranos"></div>
+            <div class="loop-slide"><img src="./fotos/tunceli.jpg" alt="tunceli"></div>
+            <div class="loop-slide"><img src="./fotos/onepiecelogo.png" alt="one piece"></div>
+            <div class="loop-slide"><img src="./fotos/turkiye.svg" alt="turkiye"></div>
+            <div class="loop-slide"><img src="./fotos/playstation.webp" alt="playstation"></div>
+            <div class="loop-slide"><img src="./fotos/kemalsunal.jpeg" alt="kemalsunal"></div>
+          </div>
+
+          <!-- groep 2 (exacte kopie van groep 1, voor naadloos scrollen) -->
+          <div class="loop-group" aria-hidden="true">
+            <div class="loop-slide"><img src="./fotos/Fenerbahçe.svg.png" alt="Fenerbahçe"></div>
+            <div class="loop-slide"><img src="./fotos/sopranos.png" alt="sopranos"></div>
+            <div class="loop-slide"><img src="./fotos/tunceli.jpg" alt="tunceli"></div>
+            <div class="loop-slide"><img src="./fotos/onepiecelogo.png" alt="one piece"></div>
+            <div class="loop-slide"><img src="./fotos/turkiye.svg" alt="turkiye"></div>
+            <div class="loop-slide"><img src="./fotos/playstation.webp" alt="playstation"></div>
+            <div class="loop-slide"><img src="./fotos/kemalsunal.jpeg" alt="kemalsunal"></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+  <!-- CONTACT -->
+  <section id="contact" class="py-5">
+    <div class="container">
+      <div class="mb-4">
+        <h2 class="h6 text-neon mono mb-1">/contact</h2>
+        <p class="mb-0">E-Mail: <a class="link-neon" href="mailto:dogucanulucan1@gmail.com">dogucanulucan1@gmail.com</a></p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="border-top border-neon-subtle py-4">
+    <div class="container text-center small text-muted">
+      © <span id="year"></span> • Doğucan Ulucan
+    </div>
+  </footer>
+
+  <!-- Bootstrap bundle (Popper + JS) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- App JS -->
+  <script src="app.js"></script>
+</body>
+</html>
